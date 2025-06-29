@@ -27,7 +27,6 @@ on:
         default: '[ "net462", "net8.0", "net9.0" ]'
         required: false
         type: string
-
 permissions:
   contents: read
 
