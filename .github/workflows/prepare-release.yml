@@ -30,6 +30,8 @@ jobs:
 
   prepare-release-pr:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write # required for pushing changes
 
     needs: automation
 
@@ -92,6 +94,8 @@ jobs:
 
   create-release-tag-pr-post-notice:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write # required for pushing changes
 
     needs: automation
 
@@ -131,6 +135,8 @@ jobs:
 
   update-changelog-release-dates-on-prepare-pr-post-notice:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write # required for pushing changes
 
     needs: automation
 
@@ -170,6 +176,8 @@ jobs:
 
   update-releasenotes-on-prepare-pr-post-notice:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write # required for pushing changes
 
     needs: automation
 
