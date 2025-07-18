@@ -23,6 +23,8 @@ jobs:
 
   push-packages-and-publish-release:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write # required for pushing changes
 
     needs: automation
 
@@ -63,6 +65,8 @@ jobs:
 
   post-release-published:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write # required for pushing changes
 
     needs:
     - automation
