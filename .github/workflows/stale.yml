@@ -13,6 +13,7 @@ jobs:
   stale:
     if: github.event.repository.fork == false
     permissions:
+      actions: write  # because actions/stale deletes its old cache before saving new one
       issues: write  # for actions/stale to close stale issues
       pull-requests: write  # for actions/stale to close stale PRs
     runs-on: ubuntu-24.04
